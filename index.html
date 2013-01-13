@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>BRACE YOURSELF!</title>
+	<style type="text/css">
+	@import "jquery.countdown.css";
+
+	#defaultCountdown { width: 240px; height: 45px; }
+	</style>
+	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="jquery.countdown.js"></script>
+	<script type="text/javascript">
+	$(function () {
+		var newYear = new Date();
+		newYear = new Date(newYear.getFullYear() + 1, 1 - 1, 1); 
+		$('#cNewYear').countdown({until: newYear});
+		
+		$('#cY2038').countdown({until: new Date(Date.UTC(2038, 0, 19, 3, 14, 8, 0))});
+		
+		$('#cMPS').countdown({until: new Date(2013, 0, 14, 7, 30, 0, 0)});
+		$('#cICP').countdown({until: new Date(2013, 0, 15, 7, 30, 0, 0)});
+		$('#cParPR').countdown({until: new Date(2013, 0, 17, 16, 30, 0, 0)});
+		
+		$('#cOS').countdown({until: new Date(2013, 0, 16, 13, 30, 0, 0)});
+		$('#cAZA').countdown({until: new Date(2013, 0, 18, 10, 30, 0, 0)});		
+		
+		$('#cKMPS').countdown({until: new Date(2013, 0, 24, 10, 30, 0, 0)});
+		$('#cPPGaSO').countdown({until: new Date(2013, 0, 25, 13, 30, 0, 0)});
+		$('#cME').countdown({until: new Date(2013, 0, 28, 16, 30, 0, 0)});
+	});
+	</script>
+	</head>
+<body>
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-37330608-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+
+	<div class="container">
+		<div class="row">
+			<div class="span3">
+				<h2>IČP</h2>
+				<div id="cICP"></div>
+				<h2>OS</h2>
+				<div id="cOS"></div>
+				<h2>ParPR</h2>
+				<div id="cParPR"></div>
+				<h2>AZA</h2>
+				<div id="cAZA"></div>
+				<h2>MPŠ</h2>
+				<div id="cMPS"></div>
+			</div>
+			<div class="span6">
+				<div class="pagination-centered">
+				<img src="brace.jpg" alt="" class="center"/>
+				</div>
+				<p>Neručím za správnosť týchto údajov, smerodajné je PDF</p>
+				<a href="http://www.fiit.stuba.sk/~galbavy/rozvrhy/FIIT_zs1213_predmety.pdf">Skusky FIIT PDF</a>
+				<pre>
+1.beh	od	7.30	do	10.15
+2.beh	od	10.30	do	13.15
+3.beh	od	13.30	do	16.15
+4.beh	od	16.30	do	19.15
+</pre>
+			</div>
+			<div class="span3">
+				<h2>KMPS<small>2nd chance</small></h2>
+				<div id="cKMPS"></div>
+				<h2>PPGaSO<small>2nd chance</small></h2>
+				<div id="cPPGaSO"></div>				
+				<h2>ME<small>2nd chance</small></h2>
+				<div id="cME"></div>
+				<h2>New Year!<small>2nd chance</small></h2>
+				<div id="cNewYear"></div>
+				<h2>Y2038 problem</h2>
+				<div id="cY2038"></div>
+			</div>		
+		</div>
+	</div>
+</body>
+</html>
